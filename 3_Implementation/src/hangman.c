@@ -10,6 +10,7 @@
  */
 #include <../inc/hangman.h>
 #include<stdio.h>
+#include<string.h>
 
 int sketch_one()
 {
@@ -79,6 +80,7 @@ char* retrieve_word(int n,char* word)
     {
         fgets(word,20,fptr);
     }
+    word[strlen(word)-1]='\0';
     return word;
 }
 
@@ -87,9 +89,9 @@ int count_lines(int choice){
     int count = 0;  // Line counter
     char c;  // To store a character read from file
     char filename[20];
-    if(choice==1)    strcpy(filename,"animals.txt");
-    else if(choice==2)   strcpy(filename,"movies.txt");
-    else if(choice==3)   strcpy(filename,"places.txt");
+    if(choice==1)    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\animals.txt");
+    else if(choice==2)   strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\movies.txt");
+    else if(choice==3)   strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\places.txt");
     // Get file name from user. The file should be
     // either in current folder or complete path should be provided  
     // Open the file

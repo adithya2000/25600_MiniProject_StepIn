@@ -34,6 +34,7 @@ int main()
     }
    srand(time(0));
    n=(rand()%line_count)+1;
+   printf("%d",n);
    strcpy(word,retrieve_word(n,word));
    printf("The word is %s",word);
    word[strlen(word)-1]='\0';
@@ -45,13 +46,14 @@ int main()
    temp_word[strlen(word)]='\0';
    
    while(chances<5)
-   {
+  {  
+      printf("%s\n",temp_word);
       printf("Enter a letter to guess the word: ");
       scanf(" %c",&lguess);
       if(isalpha(lguess)==0)
       {
-         continue;
          printf("Enter a valid letter from the alphabet\n");
+         continue;
       }
       strcpy(temp_word,update_word(temp_word,word,lguess));
       if(strcmp(temp_word,word)==0)
