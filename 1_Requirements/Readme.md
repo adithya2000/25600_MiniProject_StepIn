@@ -22,7 +22,7 @@ A set of words is present in a text file for each category. When the user plays 
 
 The user wins when he guesses the word correctly within 5 chances. The user loses the game when the sketch of the hangman is complete(after exhausting the chances).
 ## SWOT ANALYSIS
-![SWOT-Sample](https://github.com/ShankarBalu/Stepin_256284/blob/main/Swot%20Analysis.png)
+![SWOT-Sample](https://github.com/adithya2000/25600_MiniProject_StepIn/blob/83b4b72ed6703cb7f8555e7ccd4586018d9ec2ce/1_Requirements/SWOT_Analysis.png)
 
 # 4W&#39;s and 1&#39;H
 
