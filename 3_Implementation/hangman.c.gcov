@@ -1,0 +1,143 @@
+        -:    0:Source:src/hangman.c
+        -:    0:Graph:hangman.gcno
+        -:    0:Data:hangman.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/**
+        -:    2: * @file hangman.c
+        -:    3: * @author Adithya Narayan K A 
+        -:    4: * @brief  Function definitions for sketches of Hanging Man and retreiving count of lines in a file
+        -:    5: * @version 0.1
+        -:    6: * @date 2021-04-14
+        -:    7: * 
+        -:    8: * @copyright Copyright (c) 2021
+        -:    9: * 
+        -:   10: */
+        -:   11:#include <../inc/hangman.h>
+        -:   12:#include<stdio.h>
+        -:   13:#include<string.h>
+        -:   14:#include <unistd.h>
+        -:   15:
+        1:   16:int sketch_one()
+        -:   17:{
+        1:   18:    printf("_______________\n");
+        1:   18-block  0
+        1:   19:    printf(" |          |  \n");
+        1:   20:    printf(" |             \n");
+        1:   21:    printf(" |             \n");
+        1:   22:    printf(" |             \n");
+        1:   23:    printf(" |             \n");
+        1:   24:    printf("_|_____________\n");
+        1:   25:    return 1;
+        -:   26:}
+        -:   27:
+        1:   28:int sketch_two()
+        -:   29:{
+        1:   30:    printf("_______________\n");
+        1:   30-block  0
+        1:   31:    printf(" |         |   \n");
+        1:   32:    printf(" |         0   \n");
+        1:   33:    printf(" |             \n");
+        1:   34:    printf(" |             \n");
+        1:   35:    printf(" |             \n");
+        1:   36:    printf("_|_____________\n");
+        1:   37:    return 2;
+        -:   38:}
+        -:   39:
+        1:   40:int sketch_three()
+        -:   41:{
+        1:   42:    printf("_______________\n");
+        1:   42-block  0
+        1:   43:    printf(" |         |   \n");
+        1:   44:    printf(" |         0   \n");
+        1:   45:    printf(" |         |   \n");
+        1:   46:    printf(" |         |   \n");
+        1:   47:    printf(" |             \n");
+        1:   48:    printf("_|_____________\n");
+        1:   49:    return 3;
+        -:   50:}
+        -:   51:
+        1:   52:int sketch_four()
+        -:   53:{
+        1:   54:    printf("_______________\n");
+        1:   54-block  0
+        1:   55:    printf(" |         |   \n");
+        1:   56:    printf(" |         0   \n");
+        1:   57:    printf(" |        /|\\ \n");
+        1:   58:    printf(" |         |   \n");
+        1:   59:    printf(" |             \n");
+        1:   60:    printf("_|_____________\n");
+        1:   61:    return 4;
+        -:   62:}
+        -:   63:
+        1:   64:int sketch_five()
+        -:   65:{
+        1:   66:    printf("_______________\n");
+        1:   66-block  0
+        1:   67:    printf(" |         |   \n");
+        1:   68:    printf(" |         0   \n");
+        1:   69:    printf(" |        /|\\ \n");
+        1:   70:    printf(" |         |   \n");
+        1:   71:    printf(" |        / \\ \n");
+        1:   72:    printf("_|_____________\n");
+        1:   73:    return 5;
+        -:   74:}
+        -:   75:
+        3:   76:char* retrieve_word(int n,char* word, char* name)
+        -:   77:{
+        -:   78:    FILE *fptr;
+        -:   79:    char filename[75];
+        3:   80:    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\");
+        3:   81:    strcat(filename,name);
+        3:   82:    fptr=fopen(filename,"r");
+        3:   82-block  0
+     3085:   83:    for(int i=0;i<n;i++)
+     3085:   83-block  0
+        -:   84:    {
+     3082:   85:        fgets(word,100,fptr);
+     3082:   85-block  0
+        -:   86:    }
+        3:   87:    word[strlen(word)-1]='\0';
+        3:   88:    return word;
+        3:   88-block  0
+        -:   89:}
+        -:   90:
+    #####:   91:int count_lines(char * name){
+        -:   92:    FILE *fp;
+    #####:   93:    int count = 0;  // Line counter
+        -:   94:    char c;  // To store a character read from file
+        -:   95:    char filename[75];
+    #####:   96:    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\");
+    #####:   97:    strcat(filename,name);
+        -:   98:    // Get file name from user. The file should be
+        -:   99:    // either in current folder or complete path should be provided  
+        -:  100:    // Open the file
+    #####:  101:    fp = fopen(filename, "r");
+    %%%%%:  101-block  0
+        -:  102:  
+        -:  103:    // Check if file exists
+    #####:  104:    if (fp == NULL)
+        -:  105:    {
+    #####:  106:        printf("Could not open file %s", filename);
+    %%%%%:  106-block  0
+    #####:  107:        return 0;
+        -:  108:    }
+    #####:  109:    c=getc(fp);
+    %%%%%:  109-block  0
+    #####:  110:    while(c!=EOF){
+    %%%%%:  110-block  0
+    #####:  111:        if(c=='\n'){
+    %%%%%:  111-block  0
+    #####:  112:            count++;
+    %%%%%:  112-block  0
+        -:  113:        }
+    #####:  114:        c=getc(fp);
+    %%%%%:  114-block  0
+        -:  115:    }
+        -:  116:    // Extract characters from file and store in character 
+        -:  117:
+        -:  118:    // Close the file
+    #####:  119:    fclose(fp); 
+    %%%%%:  119-block  0
+    #####:  120:    return count;
+        -:  121:}
