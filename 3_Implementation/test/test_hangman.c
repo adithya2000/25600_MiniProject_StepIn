@@ -6,8 +6,6 @@
 #include <../inc/hangman.h>
 #define PROJECT_NAME "Hangman"
 
-char word[100];
-
 /* Prototypes for all the test functions */
 void test_sketch_one(void);
 void test_sketch_two(void);
@@ -59,6 +57,7 @@ void test_sketch_five(void) {
 }
 
 void test_retrieve_word(void){
+  char word[100];
   TEST_ASSERT_EQUAL(0,strcmp("Spider monkey",retrieve_word(405,word,"animals.txt")));
   TEST_ASSERT_EQUAL(0,strcmp("Star Wars: Episode V - The Empire Strikes Back",retrieve_word(12,word,"movies.txt")));
   TEST_ASSERT_EQUAL(0,strcmp("Dysart",retrieve_word(2665,word,"places.txt")));
