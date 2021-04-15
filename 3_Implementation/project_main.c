@@ -23,25 +23,43 @@ int main()
    fparr[3]=sketch_four;
    fparr[4]=sketch_five;
    int choice;
+   char name[75];
    label: printf("\nEnter the category to get the words from: 1) Animals, 2) Movies, 3) Places");
    scanf("%d",&choice);
+   printf("%d",choice);
+   if(choice==1){
+      strcpy(name,"animals.txt");
+   }
+   else if(choice==2){
+      strcpy(name,"movies.txt");
+   }
+   else if(choice==3){
+      strcpy(name,"places.txt");
+   }
    int line_count;
    if(choice>0 && choice<4)
-      line_count = count_lines(choice);
+      line_count = count_lines(name);
    else {
        printf("\nInvalid choice");
        goto label;
     }
    srand(time(0));
-   n=(rand()%line_count)+1;
-   printf("%d",n);
-   strcpy(word,retrieve_word(n,word));
+   // n=(rand()%line_count)+1;
+   //printf("%d",n);
+   strcpy(word,retrieve_word(410,word,name));
    printf("The word is %s",word);
    word[strlen(word)-1]='\0';
    printf("%d %s\n",strlen(word),word);
-   for(int i=0;i<strlen(word);i++)
-   {
-      temp_word[i]='_';
+   int i=0;
+   while(i<strlen(word)){
+      if(isalpha(word[i])){
+         temp_word[i]='_';
+      }
+      else{
+         temp_word[i]=word[i];
+      }
+      i++;
+   
    }
    temp_word[strlen(word)]='\0';
    
@@ -71,13 +89,13 @@ char* update_word(char* temp_word,char* word,char lguess)
     int count=0;
     for(int i=0;i<strlen(word);i++)
     {
-       if(word[i]==lguess)
+       if(word[i]==toupper(lguess) || word[i]== tolower(lguess))
        {
-          temp_word[i]=lguess;
+          temp_word[i]=word[i];
           count++;
        }
     }
-    printf("The current progress in the word: %s\n",temp_word);
+    printf("The current state of the word: %s\n",temp_word);
     if(count==0)
     {
        fparr[chances]();

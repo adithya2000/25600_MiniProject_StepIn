@@ -47,15 +47,16 @@ int sketch_five();
  * 
  * @param n (nth word to be retrieved from the file)
  * @param word (the pointer to the string in which the word is to be stored)
+ * @param name name of the file to be opened
  * @return char* 
  */
-char* retrieve_word(int n,char* word);
+char* retrieve_word(int n,char* word, char* name);
 
 /**
  * @brief This is a function to retrieve the number of lines from a text file
  * 
- * @param choice  choice of user's category
+ * @param name name of the file
  * @return int 
  */
-int count_lines(int choice);
+int count_lines(char* name);
 #endif  /* #define __SKETCHING_OPERATIONS_H__ */

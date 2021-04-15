@@ -26,7 +26,8 @@ African leopard
 Albatross
 Alligator
 Alpaca
-American buffalo (bison)
+American buffalo
+Bison
 American robin
 Amphibian
 list
@@ -45,7 +46,7 @@ Arctic Wolf
 Armadillo
 Arrow crab
 Asp
-Ass (donkey)
+Ass
 Baboon
 Badger
 Bald eagle
@@ -79,8 +80,7 @@ Bonobo
 Booby
 Box jellyfish
 Bovid
-Buffalo, African
-Buffalo, American (bison)
+Buffalo
 Bug
 Butterfly
 Buzzard
@@ -356,8 +356,7 @@ Rainbow trout
 Rat
 Rattlesnake
 Raven
-Ray (Batoidea)
-Ray (Rajiformes)
+Rays
 Red panda
 Reindeer
 Reptile
@@ -477,10 +476,6 @@ Yak
 Yellow perch
 Zebra
 Zebra finch
-Animals by number of neurons
-Animals by size
-Common household pests
-Common names of poisonous animals
 Alpaca
 Bali cattle
 Cat

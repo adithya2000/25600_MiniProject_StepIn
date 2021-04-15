@@ -72,26 +72,27 @@ int sketch_five()
     return 5;
 }
 
-char* retrieve_word(int n,char* word)
+char* retrieve_word(int n,char* word, char* name)
 {
     FILE *fptr;
-    fptr=fopen("words.txt","r");
+    char filename[75];
+    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\");
+    strcat(filename,name);
+    fptr=fopen(filename,"r");
     for(int i=0;i<n;i++)
     {
-        fgets(word,20,fptr);
+        fgets(word,30,fptr);
     }
-    word[strlen(word)-1]='\0';
     return word;
 }
 
-int count_lines(int choice){
+int count_lines(char * name){
     FILE *fp;
     int count = 0;  // Line counter
     char c;  // To store a character read from file
-    char filename[20];
-    if(choice==1)    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\animals.txt");
-    else if(choice==2)   strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\movies.txt");
-    else if(choice==3)   strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\places.txt");
+    char filename[75];
+    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\");
+    strcat(filename,name);
     // Get file name from user. The file should be
     // either in current folder or complete path should be provided  
     // Open the file
@@ -103,13 +104,16 @@ int count_lines(int choice){
         printf("Could not open file %s", filename);
         return 0;
     }
-  
-    // Extract characters from file and store in character c
-    for (c = getc(fp); c != EOF; c = getc(fp))
-        if (c == '\n') // Increment count if this character is newline
-            count = count + 1;
-  
+    c=getc(fp);
+    while(c!=EOF){
+        if(c=='\n'){
+            count++;
+        }
+        c=getc(fp);
+    }
+    // Extract characters from file and store in character 
+
     // Close the file
-    fclose(fp);  
+    fclose(fp); 
     return count;
 }
