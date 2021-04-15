@@ -8,14 +8,15 @@
 
 int chances=0;
 
-char* update_word(char* temp_word,char* word,char lguess);
+char* update_word(char* temp_word,char* word,char guessed_letter);
 int (*fparr[5])();
 
 
 int main()
 {
    int n;
-   char lguess,word[50],temp_word[50];
+   char guessed_letter,word[50],temp_word[50];
+   int guessed_arr[26]={0};
 
    fparr[0]=sketch_one;
    fparr[1]=sketch_two;
@@ -26,7 +27,6 @@ int main()
    char name[75];
    label: printf("\nEnter the category to get the words from: 1) Animals, 2) Movies, 3) Places  : ");
    scanf("%d",&choice);
-   printf("%d\n",choice);
    if(choice==1){
       strcpy(name,"animals.txt");
    }
@@ -64,31 +64,40 @@ int main()
    
    while(chances<5)
   {  
-      printf("%s\n",temp_word);
-      printf("Enter a letter to guess the word: ");
-      scanf(" %c",&lguess);
-      if(isalpha(lguess)==0)
+      guess: if(chances==0)  printf("\n%s\n",temp_word);
+      printf("\nEnter a letter to guess the word: ");
+      scanf(" %c",&guessed_letter);
+      guessed_letter=tolower(guessed_letter);
+      if(isalpha(guessed_letter)==0)
       {
-         printf("Enter a valid letter from the alphabet\n");
+         printf("Invalid entry. Try an alphabet\n");
          continue;
       }
-      strcpy(temp_word,update_word(temp_word,word,lguess));
+      if(guessed_arr[(int)guessed_letter-97]!=1){
+         guessed_arr[(int)guessed_letter-97]=1;
+         strcpy(temp_word,update_word(temp_word,word,guessed_letter));
+      }
+      else {
+         printf("\nYou have already tried this letter.. Try another one");
+         goto guess;
+      }
+      
       if(strcmp(temp_word,word)==0)
       {
-         printf("You have guessed the word correctly\n");
+         printf("CONGRATULATIONS!!! You have guessed the word correctly\n");
          return 0;
       }
    }
-   printf("You have lost all the chances. The correct word is %s",word);
+   printf("You have lost all the chances. The man is hanged! \nThe correct word is %s",word);
    return 0;
 }
 
-char* update_word(char* temp_word,char* word,char lguess)
+char* update_word(char* temp_word,char* word,char guessed_letter)
 {   
     int count=0;
     for(int i=0;i<strlen(word);i++)
     {
-       if(word[i]==toupper(lguess) || word[i]== tolower(lguess))
+       if(word[i]==toupper(guessed_letter) || word[i]== tolower(guessed_letter))
        {
           temp_word[i]=word[i];
           count++;

@@ -2,7 +2,7 @@
 
 Visit [Pages for Report -optional](using github.io option)
 
-The foundation of the project has been referred from the [Shankar Balu]'s (https://github.com/ShankarBalu/Miniproject_256284) repo, since I had been caught up with my internship and project work. Have been adding new functionalities and making changes to the code as well as documentation so as to make sure this project is worth using over the others.
+The foundation of the project has been referred from the Shankar's repo (https://github.com/ShankarBalu/Miniproject_256284), since I had been caught up with my internship and project work. I Have added new functionalities and made changes to the code as well as documentation so as to make sure this project is different and fun to use compared to the others.
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option) | CI-Coverage
 ------|----------|-------|--------------|--------------

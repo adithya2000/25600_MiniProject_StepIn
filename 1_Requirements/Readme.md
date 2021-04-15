@@ -50,7 +50,7 @@ Some words are stored in a text file. When the user wants to play, a word is cho
 ## High Level Requirements:
 ID   | Description                                    | Status
 -----|------------------------------------------------|---------
-HR01 | To be able to set words for guessing|
+HR01 | To be able to set words for guessing in each category|
 HR02 | Correct progress of the game with the sketch appearing appropriately|
 HR03 | Game must end appropriately and the result should be displayed|
 
@@ -61,6 +61,7 @@ ID  | Description                   | HLR ID | Status
  LR01| To be able to retrieve a word from the text file|HR01|
  LR02| To be able to display the incomplete word with blank spaces after every guess|HR02|
  LR03| To be able to display the appropriate sketch after every wrong guess|HR02|
- LR04| To check whether a letter from alphabet is given from user|HR02|
- LR05| To indicate that the user has won if the word is guessed within 5 incorrect guesses|HR03|
- LR06| To indicate that the user has lost if the word is not guesses within 5 incorrect guesses|HR03|
+ LR04| To check whether a valid character (alphabet in this case) is given as input from user|HR02|
+ LR05| To check if the letter guessed has already been guessed earlier and notify the user|HR02|
+ LR06| To indicate that the user has won if the word is guessed within 5 incorrect guesses|HR03|
+ LR07| To indicate that the user has lost if the word is not guessed within 5 incorrect guesses|HR03|
