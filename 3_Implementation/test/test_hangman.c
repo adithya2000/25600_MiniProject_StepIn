@@ -1,9 +1,10 @@
 #include "unity.h"
+#include "unity_internals.h"
 #include<string.h>
 
 /* Modify these two lines according to the project */
 #include <../inc/hangman.h>
-#define PROJECT_NAME    "Hangman"
+#define PROJECT_NAME "Hangman"
 
 char word[100];
 
