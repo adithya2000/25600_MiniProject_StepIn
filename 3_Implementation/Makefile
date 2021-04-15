@@ -60,7 +60,8 @@ run:$(PROJECT_NAME)
 #	make -C ./documentation
 doc:
 	make -C doc
-
+$(BUILD):
+	mkdir $(BUILD)
 
 # Build and run the unit tests
 test:$(BUILD)
