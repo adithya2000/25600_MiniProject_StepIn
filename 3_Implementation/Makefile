@@ -37,7 +37,7 @@ INCLUDE_LIBS =
 # Project Output name
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).$(EXEC)
 #Test output name
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).$(EXEC)
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME)
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
