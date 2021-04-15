@@ -3,7 +3,7 @@
 Visit [Pages for Report -optional](using github.io option)
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option) | CI-Coverage
-------|----------|-------|--------------|------------
+------|----------|-------|--------------|--------------
 [![C/C++ CI - Build Status](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/c-cpp.yml) | [![Code Quality - Static Code - Cppcheck](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/cppcheck.yml) [![CodeQuality Dynamic Code Analysis Valgrind](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/CodeQuality_Dynamic.yml)|[![Unit Testing - Unity](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/unity.yml/badge.svg)](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/unity.yml)| [![Contribution Check - Git Inspector](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/gitinspector.yml) | [![CI-Coverage](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/gcov.yml/badge.svg)](https://github.com/adithya2000/256300_MiniProject_StepIn/actions/workflows/gcov.yml)
 
 ## Folder Structure
