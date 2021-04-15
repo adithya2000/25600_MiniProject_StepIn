@@ -11,6 +11,7 @@
 #include <../inc/hangman.h>
 #include<stdio.h>
 #include<string.h>
+#include <unistd.h>
 
 int sketch_one()
 {
@@ -83,6 +84,7 @@ char* retrieve_word(int n,char* word, char* name)
     {
         fgets(word,100,fptr);
     }
+    word[strlen(word)-1]='\0';
     return word;
 }
 

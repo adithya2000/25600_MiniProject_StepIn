@@ -5,7 +5,7 @@
 #include <../inc/hangman.h>
 #define PROJECT_NAME    "Hangman"
 
-char word[20];
+char word[100];
 
 /* Prototypes for all the test functions */
 void test_sketch_one(void);

@@ -48,7 +48,6 @@ int main()
    printf("%d",n);
    strcpy(word,retrieve_word(n,word,name));
    printf("\nThe word is %s",word);
-   word[strlen(word)]='\0';
    printf("\n%d %s\n",strlen(word),word);
    int i=0;
    while(i<strlen(word)){
