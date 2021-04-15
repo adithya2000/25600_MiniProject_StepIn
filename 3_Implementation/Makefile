@@ -49,11 +49,11 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).$(EXEC)
+		gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).$(EXEC)
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).$(EXEC)
+		./$(PROJECT_OUTPUT).$(EXEC)
 
 # Document the code using Doxygen
 #doc:
@@ -65,8 +65,8 @@ $(BUILD):
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT).$(EXEC)
-	./$(TEST_OUTPUT).$(EXEC)
+		gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT).$(EXEC)
+		./$(TEST_OUTPUT).$(EXEC)
 #Coverage
 coverageCheck:$(PROJECT_NAME)
 	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT))
