@@ -9,8 +9,8 @@ SRC = project_main.c\
 src/hangman.c
 
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
+TEST_SRC = src/hangman.c\
+test/test_hangman.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out

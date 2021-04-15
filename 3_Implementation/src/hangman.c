@@ -81,7 +81,7 @@ char* retrieve_word(int n,char* word, char* name)
     fptr=fopen(filename,"r");
     for(int i=0;i<n;i++)
     {
-        fgets(word,30,fptr);
+        fgets(word,100,fptr);
     }
     return word;
 }

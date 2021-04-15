@@ -24,9 +24,9 @@ int main()
    fparr[4]=sketch_five;
    int choice;
    char name[75];
-   label: printf("\nEnter the category to get the words from: 1) Animals, 2) Movies, 3) Places");
+   label: printf("\nEnter the category to get the words from: 1) Animals, 2) Movies, 3) Places  : ");
    scanf("%d",&choice);
-   printf("%d",choice);
+   printf("%d\n",choice);
    if(choice==1){
       strcpy(name,"animals.txt");
    }
@@ -44,12 +44,12 @@ int main()
        goto label;
     }
    srand(time(0));
-   // n=(rand()%line_count)+1;
-   //printf("%d",n);
-   strcpy(word,retrieve_word(410,word,name));
-   printf("The word is %s",word);
-   word[strlen(word)-1]='\0';
-   printf("%d %s\n",strlen(word),word);
+   n=(rand()%line_count)+1;
+   printf("%d",n);
+   strcpy(word,retrieve_word(n,word,name));
+   printf("\nThe word is %s",word);
+   word[strlen(word)]='\0';
+   printf("\n%d %s\n",strlen(word),word);
    int i=0;
    while(i<strlen(word)){
       if(isalpha(word[i])){
