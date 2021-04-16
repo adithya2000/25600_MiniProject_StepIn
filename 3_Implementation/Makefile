@@ -65,8 +65,8 @@ $(BUILD):
 
 # Build and run the unit tests
 test:$(BUILD)
-		gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-		./$(TEST_OUTPUT)
+		gcc $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT)) -lm
+		./$(call FixPath,$(TEST_OUTPUT))
 #Coverage
 coverageCheck:$(PROJECT_NAME)
 	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT))
