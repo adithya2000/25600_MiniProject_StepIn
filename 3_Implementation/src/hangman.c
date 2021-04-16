@@ -93,7 +93,7 @@ int count_lines(char * name){
     int count = 0;  // Line counter
     char c;  // To store a character read from file
     char filename[75];
-    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\");
+    strcpy(filename,"src\\");
     strcat(filename,name);
     // Get file name from user. The file should be
     // either in current folder or complete path should be provided  

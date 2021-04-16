@@ -45,10 +45,10 @@ int main()
     }
    srand(time(0));
    n=(rand()%line_count)+1;
-   printf("%d",n);
+   //printf("%d",n);
    strcpy(word,retrieve_word(n,word,name));
-   printf("\nThe word is %s",word);
-   printf("\n%d %s\n",strlen(word),word);
+   //printf("\nThe word is %s",word);
+   //printf("\n%d %s\n",strlen(word),word);
    int i=0;
    while(i<strlen(word)){
       if(isalpha(word[i])){
