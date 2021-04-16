@@ -7,7 +7,14 @@
 #include<ctype.h>
 
 int chances=0;
-
+/**
+ * @brief This function is to update the word that has to be guessed whenever a user guesses a correct letter.
+ * 
+ * @param temp_word the word that has to be updated with the right alphabet
+ * @param word the original word that the user is asked to guess
+ * @param guessed_letter the letter the user guessed right
+ * @return char* 
+ */
 char* update_word(char* temp_word,char* word,char guessed_letter);
 int (*fparr[5])();
 
