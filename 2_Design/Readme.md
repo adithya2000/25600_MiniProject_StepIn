@@ -6,7 +6,7 @@
 
 ## Use Case 
 
-![UseCaseDiagram](hangman_UML.png)
+![UseCaseDiagram](Hangman_UML.png)
 
 ## Tools 
 * [Draw.io](https://app.diagrams.net/)
