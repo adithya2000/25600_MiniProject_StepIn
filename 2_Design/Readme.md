@@ -4,11 +4,9 @@
 
 ![Flowchart](hangman_flow.png)
 
-## Low Level Design 
+## Use Case 
 
---- TBD Structural and Behavioural Diagram
-![FeaturesLevelStructuralDiagram](Link to Pic)
-![FeaturesBehaviouralDiagram](Link to Pic)
+![UseCaseDiagram](hangman_UML.png)
 
 ## Tools 
 * [Draw.io](https://app.diagrams.net/)
