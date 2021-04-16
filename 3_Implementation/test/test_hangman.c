@@ -1,6 +1,7 @@
 #include "unity.h"
 #include "unity_internals.h"
 #include<string.h>
+#include<stdio.h>
 
 /* Modify these two lines according to the project */
 #include <../inc/hangman.h>
