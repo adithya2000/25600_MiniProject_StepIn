@@ -1,7 +1,7 @@
 /**
  * @file hangman.c
  * @author Adithya Narayan K A 
- * @brief  Function definitions for sketches of Hanging Man and retreiving count of lines in a file
+ * @brief  Function definitions for sketches of Hanging Man and retreiving a word from a file and count of lines in a file
  * @version 0.1
  * @date 2021-04-14
  * 

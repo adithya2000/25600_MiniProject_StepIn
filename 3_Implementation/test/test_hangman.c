@@ -60,6 +60,9 @@ void test_sketch_five(void) {
 void test_retrieve_word(void){
   char word[100];
   TEST_ASSERT_EQUAL(0,strcmp("Spider monkey",retrieve_word(405,word,"animals.txt")));
+  printf("%s\n",word);
   TEST_ASSERT_EQUAL(0,strcmp("Star Wars: Episode V - The Empire Strikes Back",retrieve_word(12,word,"movies.txt")));
+  printf("%s\n",word);
   TEST_ASSERT_EQUAL(0,strcmp("Dysart",retrieve_word(2665,word,"places.txt")));
+  printf("%s\n",word);
 }
