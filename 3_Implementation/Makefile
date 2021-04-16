@@ -37,7 +37,7 @@ INCLUDE_LIBS =
 # Project Output name
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).$(EXEC)
 #Test output name
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME)
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).$(EXEC)
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
@@ -49,7 +49,7 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-		gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).$(EXEC)
+		gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
@@ -65,8 +65,8 @@ $(BUILD):
 
 # Build and run the unit tests
 test:$(BUILD)
-		gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT).$(EXEC)
-		./$(TEST_OUTPUT).$(EXEC)
+		gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
+		./$(TEST_OUTPUT)
 #Coverage
 coverageCheck:$(PROJECT_NAME)
 	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT))
