@@ -77,7 +77,7 @@ char* retrieve_word(int n,char* word, char* name)
 {
     FILE *fptr;
     char filename[75];
-    strcpy(filename,"F:\\C Programming\\25600_MiniProject_StepIn\\3_Implementation\\src\\");
+    strcpy(filename,"src\\");
     strcat(filename,name);
     fptr=fopen(filename,"r");
     for(int i=0;i<n;i++)
